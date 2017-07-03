@@ -15,7 +15,7 @@ def crx_manifest(version_type, filepath, increment, indent):
             ver_str = str(major) + ".0.0"
         elif version_type == "minor":
             minor = int(indiv_ver[1]) + increment
-            ver_str = str(indiv_ver[0]) + "." + str(minor) + "." + str(indiv_ver[2])
+            ver_str = str(indiv_ver[0]) + "." + str(minor) + ".0"
         elif version_type == "patch":
             patch = int(indiv_ver[2]) + increment
             ver_str = str(indiv_ver[0]) + "." + str(indiv_ver[1]) + "." + str(patch)
