@@ -1,10 +1,10 @@
 import json
-
+from collections import OrderedDict
 
 def crx_manifest(version_type, filepath, increment, indent):
     if (version_type):
         with open(filepath, "r") as manifest_json_file:
-            data = json.load(manifest_json_file)
+            data = json.load(manifest_json_file, object_pairs_hook=OrderedDict)
             manifest_json_file.close()
 
         curr_ver = data['version']
